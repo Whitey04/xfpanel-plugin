@@ -38,7 +38,7 @@ function checkTextFadeouts () {
 	var fadersList = $$('.fadeHiddenText');
 	for (var x=0; x<fadersList.length; x++)
 	{
-		var applyFade = (fadersList[x].scrollWidth > fadersList[x].offsetWidth);
+		var applyFade = (fadersList[x].scrollWidth >= fadersList[x].offsetWidth);
 		
 		var imgList = fadersList[x].select('img.fadeHiddenTextImg');
 		for (var y=0; y<imgList.length; y++)
@@ -80,7 +80,6 @@ function checkTextFadeoutsInit () {
 	
 	checkTextFadeouts();
 }
-
 
 Behaviour.addLoadEvent(function(){
 	//Remove side panel from display (since XFP displays as a "full" screen)
